@@ -5,7 +5,11 @@
              version="3.2">
     <!--CTRL + SHIFT + O Import dependencija-->
     <!--CTRL + SHIFT + I Import dependencija-->
-    <persistence-unit name="library">
+    <persistence-unit name="library" transaction-type="RESOURCE_LOCAL">
+      <class>org.example.model.Author</class>
+      <class>org.example.model.Book</class>
+
+
 <properties>
     <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
     <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:test"/>
